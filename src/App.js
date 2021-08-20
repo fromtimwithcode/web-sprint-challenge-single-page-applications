@@ -36,10 +36,9 @@ const postNewPizza = newPizza => {
   axios.post('https://reqres.in/api/orders', newPizza)
     .then(res => {
       setPizzas([...pizzas, res.data])
-      console.log([...pizzas, res.data])
     })
     .catch(err => {
-      console.log(err)
+      console.error(err)
     })
     .finally(() => {
       setFormValues(initialFormValues)
