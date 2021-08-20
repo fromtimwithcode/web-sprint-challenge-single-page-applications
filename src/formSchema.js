@@ -4,7 +4,7 @@ export default yup.object().shape({
    size:yup.string()
       .oneOf(['small','medium','large'], 'Size is a required input.'),
    instructions:yup.string()
-      .required('Instructions required. In none, type N/A'),
+      .required('Instructions required. Type N/A if none.'),
    name:yup.string()
       .required('Name is a required input.')
       .min(2, 'Must be 2 characters or longer'),
