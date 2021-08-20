@@ -17,7 +17,7 @@ export default function Form(props){
   
     return(
         
-        <form name="pizza-form" onSubmit={onSubmit}>
+        <form name="pizza-form" id="pizza-form" onSubmit={onSubmit}>
             <div className="home-container">
                 <h1>Build Your Own Pizza</h1>
             </div>
@@ -33,6 +33,7 @@ export default function Form(props){
                         onChange={onChange}
                         value={values.size}
                         name='size'
+                        id='size-dropdown'
                     >
                         <option value=''>-- Select a Size Option --</option>
                         <option value='small'>Small</option>
@@ -86,6 +87,7 @@ export default function Form(props){
                     onChange={onChange}
                     name='instructions'
                     type='text'
+                    id='special-text'
                     />
                 </div>
                 <div className="name">
@@ -97,6 +99,7 @@ export default function Form(props){
                     onChange={onChange}
                     name='name'
                     type='text'
+                    id='name-input'
                     />
                 </div>
                 <div className="orderBtn">
